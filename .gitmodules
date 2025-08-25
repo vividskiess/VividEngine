@@ -1,0 +1,3 @@
+[submodule "Vivid/vendor/spdlog"]
+	path = Vivid/vendor/spdlog
+	url = https://github.com/gabime/spdlog

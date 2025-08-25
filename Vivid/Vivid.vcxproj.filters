@@ -27,9 +27,15 @@
     <ClInclude Include="src\Vivid\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Vivid\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vivid\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivid\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
