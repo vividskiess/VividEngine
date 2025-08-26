@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>vvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VV_PLATFORM_WINDOWS;VV_BUILD_DLL;VV_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -91,6 +91,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Vivid\Vivid.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -105,7 +106,7 @@ copy /B /Y ..\bin\Debug-windows-x86_64\Vivid\Vivid.dll ..\bin\Debug-windows-x86_
       <PrecompiledHeaderFile>vvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VV_PLATFORM_WINDOWS;VV_BUILD_DLL;VV_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -116,6 +117,7 @@ copy /B /Y ..\bin\Debug-windows-x86_64\Vivid\Vivid.dll ..\bin\Debug-windows-x86_
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Vivid\Vivid.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -130,7 +132,7 @@ copy /B /Y ..\bin\Release-windows-x86_64\Vivid\Vivid.dll ..\bin\Release-windows-
       <PrecompiledHeaderFile>vvpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>VV_PLATFORM_WINDOWS;VV_BUILD_DLL;VV_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -141,6 +143,7 @@ copy /B /Y ..\bin\Release-windows-x86_64\Vivid\Vivid.dll ..\bin\Release-windows-
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Vivid\Vivid.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
@@ -150,6 +153,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Vivid\Vivid.dll ..\bin\Dist-windows-x86_64
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Vivid.h" />
     <ClInclude Include="src\Vivid\Application.h" />
     <ClInclude Include="src\Vivid\Core.h" />
@@ -159,14 +163,21 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Vivid\Vivid.dll ..\bin\Dist-windows-x86_64
     <ClInclude Include="src\Vivid\Events\KeyEvent.h" />
     <ClInclude Include="src\Vivid\Events\MouseEvent.h" />
     <ClInclude Include="src\Vivid\Log.h" />
+    <ClInclude Include="src\Vivid\Window.h" />
     <ClInclude Include="src\vvpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Vivid\Application.cpp" />
     <ClCompile Include="src\Vivid\Log.cpp" />
     <ClCompile Include="src\vvpzh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

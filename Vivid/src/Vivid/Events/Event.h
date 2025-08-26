@@ -1,5 +1,6 @@
 #pragma once
 
+#include "vvpch.h"
 #include "Vivid/Core.h"
 
 namespace Vivid {

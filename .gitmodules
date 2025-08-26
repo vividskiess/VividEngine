@@ -1,3 +1,6 @@
 [submodule "Vivid/vendor/spdlog"]
 	path = Vivid/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Vivid/vendor/GLFW"]
+	path = Vivid/vendor/GLFW
+	url = https://github.com/vividskiess/glfw
