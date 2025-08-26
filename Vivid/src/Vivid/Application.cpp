@@ -1,3 +1,4 @@
+#include "vvpch.h"
 #include "Application.h"
 
 #include "Vivid/Events/ApplicationEvent.h"

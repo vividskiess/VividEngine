@@ -2,9 +2,6 @@
 
 #include "Vivid/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Vivid {
 
 

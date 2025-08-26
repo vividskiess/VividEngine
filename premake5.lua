@@ -18,6 +18,9 @@ project "Vivid"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "vvpch.h"
+	pchsource "Vivid/src/vvpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

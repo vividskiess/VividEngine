@@ -34,6 +34,7 @@
     <ClInclude Include="src\Vivid\Log.h">
       <Filter>Vivid</Filter>
     </ClInclude>
+    <ClInclude Include="src\vvpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vivid\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Vivid\Log.cpp">
       <Filter>Vivid</Filter>
     </ClCompile>
+    <ClCompile Include="src\vvpzh.cpp" />
   </ItemGroup>
 </Project>

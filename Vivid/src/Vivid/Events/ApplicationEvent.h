@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Vivid {
 
 	class VIVID_API WindowResizeEvent : public Event
