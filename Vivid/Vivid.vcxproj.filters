@@ -4,6 +4,9 @@
     <Filter Include="Vivid">
       <UniqueIdentifier>{27D34E0E-93E7-76BF-5C69-1A1FC83C73F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Vivid\Events">
+      <UniqueIdentifier>{2B8D8036-17F0-0FDB-C075-4891ACB7DB5D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Vivid.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Vivid\EntryPoint.h">
       <Filter>Vivid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivid\Events\ApplicationEvent.h">
+      <Filter>Vivid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivid\Events\Event.h">
+      <Filter>Vivid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivid\Events\KeyEvent.h">
+      <Filter>Vivid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivid\Events\MouseEvent.h">
+      <Filter>Vivid\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Vivid\Log.h">
       <Filter>Vivid</Filter>
